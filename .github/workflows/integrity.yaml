@@ -25,7 +25,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
       - name: Set up environment
-        run: cp .env.dist .env
+        run: |
+          cp .env.dist .env
+          sed -i "s|^DISCORD_TOKEN=.*|DISCORD_TOKEN=\"${{ secrets.DISCORD_TOKEN }}\"|" .env
+          sed -i "s|^DISCORD_GUID_ID=.*|DISCORD_GUID_ID=\"${{ secrets.DISCORD_GUID_ID }}\"|" .env
       - name: Run Docker environment
         run: docker compose up -d --build --wait
         timeout-minutes: 3
