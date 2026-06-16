@@ -1,0 +1,12 @@
+import { Injectable, Logger } from '@nestjs/common';
+import { Once, Context, ContextOf } from 'necord';
+
+@Injectable()
+export class AppService {
+  private readonly logger = new Logger(AppService.name);
+
+  @Once('clientReady')
+  public onReady(@Context() [client]: ContextOf<'clientReady'>) {
+    this.logger.log(`Bot logged in as ${client.user.username}`);
+  }
+}
