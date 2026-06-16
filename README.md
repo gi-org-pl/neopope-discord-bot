@@ -1,32 +1,8 @@
-# Nest.js project boilerplate nestjs-project-boilerplate
+# neopope-discord-bot
 
 ## Repository contents
 
-Repository contains boilerplate project using Nest.js.
-
-Project is using Node.js and TypeScript in versions listed below:
-
-| Technology | Version |
-| ---------- | ------- |
-| Node.js    | 24.10   |
-| TypeScript | 5.8     |
-
-Main dependencies are Nest.js and Prisma ORM in versions listed below.
-
-| Vendor  | Version |
-| ------- | ------- |
-| Nest.js | ^11.1   |
-| Prisma  | ^6.7.0  |
-
-## Infrastructure
-
-We use the following services:
-
-- AWS EC2 instance with Dokku, with:
-    - app container (docker container locally)
-    - PostgreSQL database (PostgreSQL container locally)
-
-Locally, they are set up using `docker compose`.
+Repository contains neopope using Nest.js and Necord library.
 
 ### Setting project up
 
@@ -34,11 +10,11 @@ This app uses docker-based virtualization to run. In order to set up project, fo
 
 1. Clone project by running:
     ```shell
-    git clone git@github.com:oskarbarcz/nestjs-project-boilerplate.git
+    git clone git@github.com:gi-org-pl/neopope-discord-bot.git
     ```
 2. Prepare environment variable file by copying .env.dist to .env and fill it with your data.
     ```shell
-    cd nestjs-project-boilerplate
+    cd neopope-discord-bot
     cp .env.dist .env
     ```
 3. Use `docker compose` to set up the environment
