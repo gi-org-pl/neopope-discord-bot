@@ -1,3 +1,5 @@
+![neopope-discord-bot header](https://raw.githubusercontent.com/gi-org-pl/neopope-discord-bot/main/.github/image/header.png)
+
 # neopope-discord-bot
 
 ## Repository contents
